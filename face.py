@@ -24,7 +24,7 @@ while True:
         scaleFactor= sF,
         minNeighbors=8,
         minSize=(55, 55),
-        flags=cv2.CV_HAAR_SCALE_IMAGE
+        flags=cv2.CASCADE_SCALE_IMAGE
     )
     # ---- Draw a rectangle around the faces
 
@@ -38,7 +38,7 @@ while True:
             scaleFactor= 1.7,
             minNeighbors=22,
             minSize=(25, 25),
-            flags=cv2.cv.CV_HAAR_SCALE_IMAGE
+            flags=cv2.CASCADE_SCALE_IMAGE
             )
 
         # Set region of interest for smiles
@@ -49,7 +49,7 @@ while True:
 
     #cv2.cv.Flip(frame, None, 1)
     cv2.imshow('Smile Detector', frame)
-    c = cv2.cv.WaitKey(7) % 0x100
+    c = cv2.waitKey(7) % 0x100
     if c == 27:
         break
 
